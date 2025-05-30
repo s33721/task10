@@ -1,4 +1,12 @@
 public abstract class Container {
+    public Container(double mass, double height, double tareWeight, double weightOfCargo, double depth, double maximumPayload) {
+        this.mass = mass;
+        this.height = height;
+        this.tareWeight = tareWeight;
+        this.weightOfCargo = weightOfCargo;
+        this.depth = depth;
+        this.maximumPayload = maximumPayload;
+    }
     double mass;
     double height;
     double tareWeight;
