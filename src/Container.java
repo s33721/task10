@@ -7,29 +7,28 @@ public abstract class Container {
         this.depth = depth;
         this.maximumPayload = maximumPayload;
     }
+
     double mass;
     double height;
     double tareWeight;
     double weightOfCargo;
     double depth;
-    abstract String serialNumber();
-    double maximumPayload;
     String serialNumber;
+
+    double maximumPayload;
+
     public abstract void setSerialNumber();
+
     public abstract String getSerialNumber();
-    public void emptyCargo(){
-        if (weightOfCargo == 0){
+
+    public void emptyCargo() {
+        if (weightOfCargo == 0) {
             System.out.println("Cargo is already empty");
-        } else{
+        } else {
             this.weightOfCargo = 0;
             System.out.println("Cargo has been emptied");
         }
     }
-    public void loadCargo(){
-        if (weightOfCargo > maximumPayload){
-            throw new OverfillException("The weight of the cargo is greater than the maximum payload");
-        } else{
-            this.mass = this.tareWeight + this.weightOfCargo;
-        }
-    }
+
+    public abstract void loadCargo();
 }

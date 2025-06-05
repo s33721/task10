@@ -3,10 +3,6 @@ public class LiquidContainer extends Container implements IHazardNotifier {
         super(mass, height, tareWeight, weightOfCargo, depth, maximumPayload);
     }
 
-    @Override
-    String serialNumber() {
-        return "";
-    }
 
     @Override
     public void setSerialNumber() {
@@ -18,4 +14,13 @@ public class LiquidContainer extends Container implements IHazardNotifier {
         return "";
     }
 
+    @Override
+    public void loadCargo() {
+        if (weightOfCargo > 0.5 * maximumPayload) {
+            System.out.println("The attempt to perform a dangerous operation has been reported.");
+            throw new OverfillException("The weight of cargo is greater than maximum payload.");
+        } else {
+            System.out.println("The cargo has been loaded successfully");
+        }
+    }
 }
