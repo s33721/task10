@@ -6,12 +6,12 @@ public class LiquidContainer extends Container implements IHazardNotifier {
 
     @Override
     public void setSerialNumber() {
-
+        this.serialNumber = "KON-L" + Math.random();
     }
 
     @Override
     public String getSerialNumber() {
-        return "";
+        return this.serialNumber;
     }
 
     @Override
