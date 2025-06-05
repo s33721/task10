@@ -14,6 +14,9 @@ public abstract class Container {
     double depth;
     abstract String serialNumber();
     double maximumPayload;
+    String serialNumber;
+    public abstract void setSerialNumber();
+    public abstract String getSerialNumber();
     public void emptyCargo(){
         if (weightOfCargo == 0){
             System.out.println("Cargo is already empty");

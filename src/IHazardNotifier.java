@@ -1,3 +1,5 @@
 public interface IHazardNotifier {
-    public void notifyHazard();
+    default void notifyHazard(){
+        System.out.println("This cargo is hazardous");
+    }
 }
