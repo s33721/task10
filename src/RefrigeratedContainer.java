@@ -21,11 +21,11 @@ public class RefrigeratedContainer extends Container {
 
     @Override
     public void loadCargo() {
+        Product product
         if (productList.isEmpty()) {
-            if (products.getProductName){
+            if (product.getProductName()) {
 
             }
-
         }
     }
 }

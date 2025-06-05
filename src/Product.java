@@ -1,8 +1,8 @@
-public class Products {
+public class Product {
     private String productName;
     private double requiredTemperature;
 
-    public Products(String productName, double requiredTemperature) {
+    public Product(String productName, double requiredTemperature) {
         this.productName = productName;
         this.requiredTemperature = requiredTemperature;
     }
