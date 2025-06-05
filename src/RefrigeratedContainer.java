@@ -11,16 +11,18 @@ public class RefrigeratedContainer extends Container {
 
     @Override
     public void setSerialNumber() {
-
+        this.serialNumber = "KON-C-" + Math.random();
     }
 
     @Override
     public String getSerialNumber() {
-        return "";
+        return this.serialNumber;
     }
 
     @Override
     public void loadCargo() {
-
+        if(!productList.isEmpty()){
+            System.out.println("Container is already loaded");
+        } else if (product)
     }
 }
