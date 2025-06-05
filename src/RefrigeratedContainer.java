@@ -21,8 +21,11 @@ public class RefrigeratedContainer extends Container {
 
     @Override
     public void loadCargo() {
-        if(!productList.isEmpty()){
-            System.out.println("Container is already loaded");
-        } else if (product)
+        if (productList.isEmpty()) {
+            if (products.getProductName){
+
+            }
+
+        }
     }
 }
