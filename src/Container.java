@@ -8,18 +8,17 @@ public abstract class Container {
         this.maximumPayload = maximumPayload;
     }
 
-    double mass;
-    double height;
-    double tareWeight;
-    double weightOfCargo;
-    double depth;
-    String serialNumber;
+    private double mass;
+    private double height;
+    private double tareWeight;
+    private double weightOfCargo;
+    private double depth;
+    private String serialNumber;
+    private double maximumPayload;
 
-    double maximumPayload;
-
-    public abstract void setSerialNumber();
-
-    public abstract String getSerialNumber();
+    public  String getSerialNumber(){
+        return this.serialNumber;
+    }
 
     public void emptyCargo() {
         if (weightOfCargo == 0) {
