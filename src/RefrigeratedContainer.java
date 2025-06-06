@@ -8,17 +8,6 @@ public class RefrigeratedContainer extends Container {
         super(mass, height, tareWeight, weightOfCargo, depth, maximumPayload);
         this.temperature = temperature;
     }
-
-    @Override
-    public void setSerialNumber() {
-        this.serialNumber = "KON-C-" + Math.random();
-    }
-
-    @Override
-    public String getSerialNumber() {
-        return this.serialNumber;
-    }
-
     @Override
     public void loadCargo() {
         Product product

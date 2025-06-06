@@ -1,16 +1,6 @@
 public class GasContainer extends Container implements IHazardNotifier {
-    public GasContainer(double mass, double height, double tareWeight, double weightOfCargo, double depth, double maximumPayload) {
-        super(mass, height, tareWeight, weightOfCargo, depth, maximumPayload);
-    }
-
-    @Override
-    public void setSerialNumber() {
-        this.serialNumber = "KON-G-" + Math.random();
-    }
-
-    @Override
-    public String getSerialNumber() {
-        return this.serialNumber;
+    public GasContainer(double mass, double height, double tareWeight, double weightOfCargo, double depth, double maximumPayload, char containerType) {
+        super(mass, height, tareWeight, weightOfCargo, depth, maximumPayload, containerType = 'G');
     }
 
     @Override
