@@ -7,14 +7,6 @@ public class Product {
         this.requiredTemperature = requiredTemperature;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
-
-    public void setRequiredTemperature(double requiredTemperature) {
-        this.requiredTemperature = requiredTemperature;
-    }
-
     public String getProductName() {
         return productName;
     }
