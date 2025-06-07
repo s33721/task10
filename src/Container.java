@@ -28,5 +28,5 @@ public abstract class Container {
         }
     }
 
-    public abstract void loadCargo();
+    public abstract void loadCargo(Product p);
 }

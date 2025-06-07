@@ -10,7 +10,7 @@ public class LiquidContainer extends Container implements IHazardNotifier {
     }
 
     @Override
-    public void loadCargo() {
+    public void loadCargo(Product p) {
         if (weightOfCargo > 0.5 * maximumPayload) {
             System.out.println("The attempt to perform a dangerous operation has been reported.");
             throw new OverfillException("The weight of cargo is greater than maximum payload.");
