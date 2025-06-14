@@ -13,17 +13,16 @@ public abstract class Container {
             double depth,
             double tareWeight,
             double maxPayload,
-            char containerType)
-    {
+            char containerType) {
         setHeight(height);
         setDepth(depth);
         setTareWeight(tareWeight);
         setMaxPayload(maxPayload);
         String containerPrefix = "KON";
-        this.serialNumber = containerPrefix +  "-" +  containerType + "-" + nextContainer++;
+        this.serialNumber = containerPrefix + "-" + containerType + "-" + nextContainer++;
     }
 
-    public void loadCargo(double mass) throws OverfillException{
+    public void loadCargo(double mass) throws OverfillException {
         if (mass <= 0) throw new IllegalArgumentException("Mass cannot be less or equal to 0");
         if (!canLoadCargo(mass)) throw new OverfillException("Failed to load cargo. Maximum payload exceeded");
 
@@ -34,7 +33,7 @@ public abstract class Container {
         setCargoWeight(0);
     }
 
-    protected boolean canLoadCargo(double mass){
+    protected boolean canLoadCargo(double mass) {
         return getCargoWeight() + mass <= getMaxPayload();
     }
 

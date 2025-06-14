@@ -1,3 +1,10 @@
+import java.util.ArrayList;
+
 public class Main {
-    // TODO: Finish ship =)
+
+    public static void main(String[] args) throws OverfillException {
+        ArrayList<Container> ship = new ArrayList<>();
+        Container petrolContainer = new LiquidContainer(200, 180, 2200, 2000, true);
+        petrolContainer.loadCargo(35);
+    }
 }
