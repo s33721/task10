@@ -21,6 +21,6 @@ public class LiquidContainer extends HazardousContainer {
 
     @Override
     protected boolean canLoadCargo(double mass) {
-        return getCargoWeight() * mass <= this.allowedMaxPayload;
+        return getCargoWeight() + mass <= this.allowedMaxPayload;
     }
 }
